@@ -21,13 +21,13 @@ Services Used:
  - Google oAuth:
     https://datatracker.ietf.org/doc/html/rfc6749
     Managing authentication for users to post new ratings/reviews.
- - Google Maps
+ - Google Maps:
     https://www.google.com/maps
     Location services and map integration for easier location of establishments
- - Planet Scale
+ - Planet Scale:
     https://docs.planetscale.com/
     Database Services
- - TailwindCSS 
+ - TailwindCSS:
     https://tailwindcss.com/docs/customizing-colors#color-palette-reference
     Coloring assistant
 
