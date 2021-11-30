@@ -26,8 +26,8 @@ Services Used:
  - Google Maps:
     https://www.google.com/maps
     Location services and map integration for easier location of establishments
- - Planet Scale:
-    https://docs.planetscale.com/
+ - SupaBase:
+    https://supabase.com/docs
     Database Services
  - TailwindCSS:
     https://tailwindcss.com/docs/customizing-colors#color-palette-reference
