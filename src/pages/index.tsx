@@ -6,7 +6,7 @@ export default function Home() {
       <HeroSection
         children={<></>}
         title="Seperating the rest from the best"
-        subtitle="Discover establishments around you and people's opinions of them."
+        subtitle="Discover where you shouldn't go next"
       />
     </>
   )
