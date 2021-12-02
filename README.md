@@ -22,8 +22,8 @@ Traditionally, users look to review websites to get recommendations for which es
 Let's say you wanted to try out a new restaurant in town. Instead of searching for each restaurant you come across on a generic review website, Nolp would offer you the capability of seeing all generally disliked restaurants in your area, eliminating the need to search up every place you come across. You will know what to avoid and what to enjoy at a moment's notice. Not only does Nolp work for restaurants, but it offers the same groundbreaking experience for almost any establishment you can dream of. This isn't an ordinary review website. This is Nolp. The future.
 
 Built with:
- - Node.js
- - HTML
+ - TypeScript
+ - JavaScript
  - CSS
 
 ## Classes
