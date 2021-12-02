@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/client'
 export default function Header() {
   return (
     <>
-      <header className="relative py-2 z-20 sm:mt-4 lg:mt-12">
+      <header className="relative py-6 z-20">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="relative h-auto lg:h-auto flex justify-between">
             <div className="flex items-center justify-start">
