@@ -18,7 +18,7 @@ export default function Header() {
             >
               <ul className="flex justify-center">
               <li>
-                  <Link href="/index">
+                  <Link href="/">
                     <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">
                       Home
                     </a>
