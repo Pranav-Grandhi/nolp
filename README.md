@@ -23,8 +23,6 @@ Let's say you wanted to try out a new restaurant in town. Instead of searching f
 
 Built with:
  - Node.js
- - TypeScript
- - JavaScript
  - HTML
  - CSS
 
