@@ -17,6 +17,13 @@ export default function Header() {
               style={{ width: 'fit-content' }}
             >
               <ul className="flex justify-center">
+              <li>
+                  <Link href="/index">
+                    <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">
+                      Home
+                    </a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/about">
                     <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">
