@@ -10,7 +10,7 @@ export default function Header() {
             <div className="flex items-center justify-start">
               <Link href="/">
                 <a className="rounded-lg flex p-2 -ml-2">
-                  <div>Nolp</div>
+                  <img src="/images/logo.svg" style={{ height: "32px" }} />
                 </a>
               </Link>
             </div>
@@ -21,7 +21,7 @@ export default function Header() {
               <ul className="flex justify-center">
                 <li>
                   <Link href="/about">
-                    <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">
+                    <a className="block px-5 py-3.5 text-sm font-medium text-black hover:text-red-500 focus:text-red-500 focus:outline-none focus-visible:shadow-none">
                       About
                     </a>
                   </Link>
@@ -30,13 +30,13 @@ export default function Header() {
             </div>
             <div className="hidden lg:flex items-center justify-end -mr-4">
               <button
-                className="flex items-center px-4 md:px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none"
+                className="flex items-center px-4 md:px-5 py-3.5 text-sm font-medium text-black hover:text-red-500 focus:text-red-500 focus:outline-none focus-visible:shadow-none"
                 onClick={() => signIn('google')}
               >
                 Sign in
               </button>
               <button
-                className="flex items-center px-4 md:px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none"
+                className="flex items-center px-4 md:px-5 py-3.5 text-sm font-medium text-black hover:text-red-500 focus:text-red-500 focus:outline-none focus-visible:shadow-none"
                 onClick={() => signIn('google')}
               >
                 Sign up
@@ -61,7 +61,7 @@ export default function Header() {
             </div>
             <button className="absolute right-0 w-10 h-10 lg:hidden">
               <svg
-                className="fill-current text-foreground-500"
+                className="fill-current text-red-500"
                 width="40"
                 height="40"
                 viewBox="0 0 40 40"
