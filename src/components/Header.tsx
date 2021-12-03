@@ -4,12 +4,14 @@ import { signIn } from 'next-auth/client'
 export default function Header() {
   return (
     <>
-      <header className="relative py-6 z-20">
+      <header className="relative py-3 z-20">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
-          <div className="relative h-auto lg:h-auto flex justify-between">
+          <div className="relative h-auto lg:h-auto flex justify-between ">
             <div className="flex items-center justify-start">
               <Link href="/">
-                <a className="rounded-lg flex p-2 -ml-2"></a>
+                <a className="rounded-lg flex p-2 -ml-2">
+                  <div>Nolp</div>
+                </a>
               </Link>
             </div>
             <div
@@ -17,13 +19,6 @@ export default function Header() {
               style={{ width: 'fit-content' }}
             >
               <ul className="flex justify-center">
-              <li>
-                  <Link href="/">
-                    <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">
-                      Home
-                    </a>
-                  </Link>
-                </li>
                 <li>
                   <Link href="/about">
                     <a className="block px-5 py-3.5 text-sm font-medium text-foreground-200 hover:text-foreground-500 focus:text-foreground-500 focus:outline-none focus-visible:shadow-none">

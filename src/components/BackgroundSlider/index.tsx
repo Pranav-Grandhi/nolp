@@ -29,6 +29,7 @@ export default function BackgroundSlider ({
 
   return (
     <div id={NAME}>
+      <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>
       {images.map((img, key) =>
         <figure key={key}
           style={{
