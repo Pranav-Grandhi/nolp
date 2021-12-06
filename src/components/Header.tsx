@@ -10,7 +10,7 @@ export default function Header() {
             <div className="flex items-center justify-start">
               <Link href="/">
                 <a className="rounded-lg flex p-2 -ml-2">
-                  <img src="/images/logo.svg" style={{ height: "32px" }} />
+                  <img src="/images/logo.svg" alt="Logo" style={{ height: "32px" }} />
                 </a>
               </Link>
             </div>

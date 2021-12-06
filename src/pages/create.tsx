@@ -33,7 +33,7 @@ export default function Create() {
         children={
           <>
             <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>
-            <img src="/images/buildings.jpg" alt="" className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat" style={{ zIndex: "-1000" }} />
+            <img src="/images/buildings.jpg" alt="Buildings" className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat" style={{ zIndex: "-1000" }} />
           </>
         }
         title="Create a new business"

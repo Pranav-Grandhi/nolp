@@ -7,7 +7,7 @@ export default function About() {
         children={
           <>
             <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>
-            <img src="/images/openSign.jpg" alt="" className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat" style={{ zIndex: "-1000" }} />
+            <img src="/images/openSign.jpg" alt="Open Sign" className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat" style={{ zIndex: "-1000" }} />
           </>
         }
         title="Get to know us"
