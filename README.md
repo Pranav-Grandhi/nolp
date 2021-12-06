@@ -1,3 +1,5 @@
+star rating: https://javascript.plainenglish.io/how-to-build-a-star-rating-component-in-react-dad06b05679b
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ```
