@@ -73,21 +73,21 @@ export default function Business() {
             <h5 className="text-2xl font-bold text-gray-700">Reviews</h5>
             <ul className="mt-4">
               <BusinessReview
-                imgsrc=""
+                imgsrc="/images/pfps/awesomeFace.png"
                 username="Agastya Gaur"
                 rating={1}
                 text="this place is trash"
                 date="12/6/21"
               />
               <BusinessReview
-                imgsrc=""
+                imgsrc="/images/pfps/pig.jpeg"
                 username="Samyukta Athreya"
                 rating={4}
                 text="its very funny"
                 date="12/6/21"
               />
               <BusinessReview
-                imgsrc=""
+                imgsrc="/images/pfps/shrek.jpeg"
                 username="Alain 'Pokimane' Morel"
                 rating={3}
                 text="Good quality"
