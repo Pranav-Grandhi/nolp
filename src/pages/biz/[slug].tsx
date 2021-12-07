@@ -81,14 +81,14 @@ export default function Business() {
               <BusinessReview
                 imgsrc="/images/pfps/awesomeFace.png"
                 username="Agastya Gaur"
-                rating={1}
+                rating={5}
                 text="this place is trash"
                 date="12/6/21"
               />
               <BusinessReview
                 imgsrc="/images/pfps/pig.jpeg"
                 username="Samyukta Athreya"
-                rating={4}
+                rating={2}
                 text="its very funny"
                 date="12/6/21"
               />
@@ -96,7 +96,7 @@ export default function Business() {
                 imgsrc="/images/pfps/shrek.jpeg"
                 username="Alain 'Pokimane' Morel"
                 rating={3}
-                text="Good quality"
+                text="Ok quality"
                 date="12/6/2021"
               />
             </ul>
