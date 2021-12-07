@@ -52,7 +52,7 @@ export default function Business() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <button
             type="submit"
-            className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out"
+            className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out hover:opacity-75"
             onClick={() => setShowWrite(true)}
           >
             Write a review
@@ -116,9 +116,14 @@ export default function Business() {
                       className="form_input"
                       {...register('text', { required: true })}
                     />
-                    <button type="submit" className="form_button">
-                      Submit
-                    </button>
+                    <div>
+                      <button 
+                        type="submit" 
+                        className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out hover:opacity-75"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>

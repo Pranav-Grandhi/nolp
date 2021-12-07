@@ -9,7 +9,7 @@ export default function Header() {
           <div className="relative h-auto lg:h-auto flex justify-between ">
             <div className="flex items-center justify-start">
               <Link href="/">
-                <a className="rounded-lg flex p-2 -ml-2">
+                <a className="rounded-lg flex p-2 -ml-2 hover:opacity-75">
                   <img
                     src="/images/logo.svg"
                     alt="Logo"
