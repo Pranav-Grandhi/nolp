@@ -2,11 +2,13 @@ import * as vendor from 'css-vendor'
 
 const generateStyleSheet = ({ imagesCount, duration, transition }) => {
   const t = imagesCount * (duration + transition)
-  const p1 = Math.round(transition / t * 100)
-  const p2 = Math.round((duration + transition) / t * 100)
+  const p1 = Math.round((transition / t) * 100)
+  const p2 = Math.round(((duration + transition) / t) * 100)
   const p3 = Math.round(p2 * 1.1)
 
-  const vendorBackfaceVisibility = vendor.supportedProperty('backface-visibility')
+  const vendorBackfaceVisibility = vendor.supportedProperty(
+    'backface-visibility'
+  )
   const vendorAnimation = vendor.supportedProperty('animation')
   const vendorKeyframes = vendor.supportedKeyframes('@keyframes')
 

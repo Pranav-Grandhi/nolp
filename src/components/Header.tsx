@@ -4,13 +4,17 @@ import { signIn } from 'next-auth/client'
 export default function Header() {
   return (
     <>
-      <header className="relative py-3 z-20">
+      <header className="relative py-3 z-20 shadow">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="relative h-auto lg:h-auto flex justify-between ">
             <div className="flex items-center justify-start">
               <Link href="/">
                 <a className="rounded-lg flex p-2 -ml-2">
-                  <img src="/images/logo.svg" alt="Logo" style={{ height: "32px" }} />
+                  <img
+                    src="/images/logo.svg"
+                    alt="Logo"
+                    style={{ height: '32px' }}
+                  />
                 </a>
               </Link>
             </div>
