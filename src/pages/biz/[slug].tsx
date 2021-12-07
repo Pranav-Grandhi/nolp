@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useState } from 'react'
+import BeautyStars from 'components/StarRating'
 
 export default function Business() {
   const router = useRouter()
@@ -26,6 +27,7 @@ export default function Business() {
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">Yolo Business</h1>
+          <BeautyStars></BeautyStars>
         </div>
       </div>
     </>
