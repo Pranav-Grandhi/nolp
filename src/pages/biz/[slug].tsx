@@ -39,6 +39,7 @@ export default function Business() {
       </div>
       <section className="relative mt-20 px-2">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
+          <button type="submit" className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out">Write a review</button>
           <div className="md:w-1/2 pb-6 mb-6 border-b">
             <h5 className="text-2xl font-bold text-gray-700 mb-4">About this business</h5>
             <p>This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.</p>
@@ -51,6 +52,15 @@ export default function Business() {
             <ul className="mt-4">
               <Review imgsrc="" username="Agastya Gaur" rating={1} text="this place is trash" />
             </ul>
+            <div className="my-6">
+              <h5 className="text-2xl font-bold text-gray-700">Write a Review</h5>
+              <div className="mt-2">
+                <div className="mb-4">
+                  <BeautyStars size={20} value={rating} onChange={value => setRating(value)} activeColor="#EF4444" inactiveColor="#D1D5DB" />
+                </div>
+                <textarea id="about" className="block w-full px-3 py-2 placeholder-gray-400 transition duration-150 ease-in-out border border-gray-300 rounded-md appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

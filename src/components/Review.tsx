@@ -21,7 +21,7 @@ export default function Review({
             <p className="ml-3 font-semibold">{username}</p>
         </div>
         <div className="my-3">        
-            <BeautyStars value={rating} size={20} />
+            <BeautyStars value={rating} size={20} activeColor="#EF4444" inactiveColor="#D1D5DB" />
         </div>
         {text}
       </div>
