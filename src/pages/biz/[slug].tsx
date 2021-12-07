@@ -27,9 +27,26 @@ export default function Business() {
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">Yolo Business</h1>
-          <BeautyStars></BeautyStars>
+          <div className="mt-4 flex items-center">
+            <BeautyStars
+              value={3}
+              size={30}
+            />
+            <p className="text-white ml-6 font-semibold text-xl">69 reviews</p>
+          </div>
         </div>
       </div>
+      <section className="relative mt-20 px-2">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
+          <div className="md:w-1/2 pb-6 mb-6 border-b">
+            <h5 className="text-2xl font-bold text-gray-700">About this business</h5>
+            <p>This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.</p>
+          </div>
+          <div className="md:w-1/2 pb-6 mb-6 border-b">
+              <h5 className="text-2xl font-bold text-gray-700">Location</h5>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

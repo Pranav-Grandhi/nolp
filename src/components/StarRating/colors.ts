@@ -1,1 +1,1 @@
-export  const COLORS = { inactive: '#121621', active: '#FFED76' };
+export  const COLORS = { inactive: '#4B5563', active: '#FFED76' };
