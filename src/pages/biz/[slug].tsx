@@ -1,18 +1,9 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { useState } from 'react'
 
 export default function Business() {
   const router = useRouter()
   const { slug } = router.query
-
-  const [rating, setRating] = useState(0) // initial rating value
-
-  // Catch Rating value
-  const handleRating = (rate: number) => {
-    setRating(rate)
-    // other logic
-  }
 
   return (
     <>
