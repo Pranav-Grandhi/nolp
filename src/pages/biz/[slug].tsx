@@ -79,6 +79,20 @@ export default function Business() {
                 text="this place is trash"
                 date="12/6/21"
               />
+              <BusinessReview
+                imgsrc=""
+                username="Samyukta Athreya"
+                rating={4}
+                text="its very funny"
+                date="12/6/21"
+              />
+              <BusinessReview
+                imgsrc=""
+                username="Alain 'Pokimane' Morel"
+                rating={3}
+                text="Good quality"
+                date="12/6/2021"
+              />
             </ul>
             {showWrite ? (
               <div className="my-6">
