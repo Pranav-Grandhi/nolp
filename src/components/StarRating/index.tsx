@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import Star from "components/StarRating/star";
-import { COLORS } from "./colors";
+import React, { FC } from 'react'
+import Star from 'components/StarRating/star'
+import { COLORS } from './colors'
 
 export interface Props {
-  maxStars?: number;
-  value?: number;
-  onChange?: (newStar: number) => void;
-  activeColor?: string;
-  inactiveColor?: string;
-  size?: number | string;
-  gap?: number | string;
-  editable?: boolean;
-  hideInactive?: boolean;
+  maxStars?: number
+  value?: number
+  onChange?: (newStar: number) => void
+  activeColor?: string
+  inactiveColor?: string
+  size?: number | string
+  gap?: number | string
+  editable?: boolean
+  hideInactive?: boolean
 }
 
 const BeautyStars: FC<Props> = ({
@@ -23,31 +23,31 @@ const BeautyStars: FC<Props> = ({
   size = 36,
   editable = true,
   gap = 16,
-  hideInactive = false
+  hideInactive = false,
 }) => (
   <ul
     style={{
       color: inactiveColor,
       margin: 0,
       padding: 0,
-      listStyle: "none",
-      display: "flex"
+      listStyle: 'none',
+      display: 'flex',
     }}
   >
     {Array(hideInactive ? value : maxStars)
       .fill(null)
       .map((_, i) => i + 1)
-      .map(starNumber => (
+      .map((starNumber) => (
         <li
           title={`${starNumber} star`}
           key={starNumber}
           onClick={() => {
-            if (onChange && editable) onChange(starNumber);
+            if (onChange && editable) onChange(starNumber)
           }}
           style={{
-            cursor: "pointer",
-            position: "relative",
-            marginRight: starNumber !== maxStars ? gap : 0
+            cursor: 'pointer',
+            position: 'relative',
+            marginRight: starNumber !== maxStars ? gap : 0,
           }}
         >
           <Star
@@ -59,6 +59,6 @@ const BeautyStars: FC<Props> = ({
         </li>
       ))}
   </ul>
-);
+)
 
-export default BeautyStars;
+export default BeautyStars

@@ -1,4 +1,4 @@
-import HeroSection from "components/hero-section"
+import HeroSection from 'components/hero-section'
 
 export default function About() {
   return (
@@ -7,13 +7,18 @@ export default function About() {
         children={
           <>
             <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>
-            <img src="/images/openSign.jpg" alt="Open Sign" className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat" style={{ zIndex: "-1000" }} />
+            <img
+              src="/images/openSign.jpg"
+              alt="Open Sign"
+              className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
+              style={{ zIndex: '-1000' }}
+            />
           </>
         }
         title="Get to know us"
         subtitle="Learn more about our mission"
       />
-      <section className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20 prose">
+      <section className="small_section prose">
         <p>
           Traditionally, users look to review websites to get recommendations
           for which establishments to visit, be it through good reviews or high

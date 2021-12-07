@@ -16,6 +16,12 @@
     "baseUrl": "src",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/auth/[...nextauth].js", "src/components/BackgroundSlider/generateStyleSheet.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/api/auth/[...nextauth].js",
+    "src/components/BackgroundSlider/generateStyleSheet.js"
+  ],
   "exclude": ["node_modules"]
 }
