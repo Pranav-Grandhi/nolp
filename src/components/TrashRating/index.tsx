@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Star from 'components/StarRating/star'
+import Trash from 'components/TrashRating/trash'
 import { COLORS } from './colors'
 
 export interface Props {
@@ -14,7 +14,7 @@ export interface Props {
   hideInactive?: boolean
 }
 
-const BeautyStars: FC<Props> = ({
+const BeautyTrash: FC<Props> = ({
   maxStars = 5,
   value = 0,
   onChange,
@@ -50,7 +50,7 @@ const BeautyStars: FC<Props> = ({
             marginRight: starNumber !== maxStars ? gap : 0,
           }}
         >
-          <Star
+          <Trash
             selected={starNumber <= value}
             activeColor={activeColor}
             inactiveColor={inactiveColor}
@@ -61,4 +61,4 @@ const BeautyStars: FC<Props> = ({
   </ul>
 )
 
-export default BeautyStars
+export default BeautyTrash

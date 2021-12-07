@@ -1,4 +1,4 @@
-import BeautyStars from './StarRating'
+import BeautyTrash from './TrashRating'
 import { LogoColor } from './vars'
 
 interface BusinessReviewProps {
@@ -36,7 +36,7 @@ export function BusinessReview({
           </div>
         </div>
         <div className="my-3">
-          <BeautyStars
+          <BeautyTrash
             value={rating}
             size={20}
             activeColor={LogoColor}
@@ -69,7 +69,7 @@ export function UserReview({
           </div>
         </div>
         <div className="my-3">
-          <BeautyStars
+          <BeautyTrash
             value={rating}
             size={20}
             activeColor={LogoColor}
