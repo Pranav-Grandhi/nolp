@@ -1,4 +1,5 @@
 import BeautyStars from './StarRating'
+import { LogoColor } from './vars'
 
 interface BusinessReviewProps {
   imgsrc: string
@@ -38,7 +39,7 @@ export function BusinessReview({
           <BeautyStars
             value={rating}
             size={20}
-            activeColor="#EF4444"
+            activeColor={LogoColor}
             inactiveColor="#D1D5DB"
           />
         </div>
