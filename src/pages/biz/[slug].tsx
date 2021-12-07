@@ -105,27 +105,25 @@ export default function Business() {
                 <h5 id="review" className="text-2xl font-bold text-gray-700">
                   Write a Review
                 </h5>
-                <div className="mt-2">
-                  <div className="mb-4">
-                    <BeautyTrash
-                      size={20}
-                      value={rating}
-                      onChange={(value) => setRating(value)}
-                      activeColor={LogoColor}
-                      inactiveColor="#D1D5DB"
-                    />
-                  </div>
-                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <textarea
-                      id="about"
-                      className="form_input"
-                      {...register('text', { required: true })}
-                    />
-                    <button type="submit" className="form_red_button mt-4">
-                      Submit
-                    </button>
-                  </form>
+                <div className="mt-2 mb-4">
+                  <BeautyTrash
+                    size={20}
+                    value={rating}
+                    onChange={(value) => setRating(value)}
+                    activeColor={LogoColor}
+                    inactiveColor="#D1D5DB"
+                  />
                 </div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <textarea
+                    id="about"
+                    className="form_input"
+                    {...register('text', { required: true })}
+                  />
+                  <button type="submit" className="form_red_button mt-6">
+                    Submit
+                  </button>
+                </form>
               </div>
             ) : (
               <></>
