@@ -1,4 +1,4 @@
-import BeautyStars from './StarRating'
+import BeautyTrash from './TrashRating'
 
 interface BusinessReviewProps {
   imgsrc: string
@@ -35,7 +35,7 @@ export function BusinessReview({
           </div>
         </div>
         <div className="my-3">
-          <BeautyStars
+          <BeautyTrash
             value={rating}
             size={20}
             activeColor="#EF4444"
@@ -68,7 +68,7 @@ export function UserReview({
           </div>
         </div>
         <div className="my-3">
-          <BeautyStars
+          <BeautyTrash
             value={rating}
             size={20}
             activeColor="#F59E0B"

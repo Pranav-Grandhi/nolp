@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useState } from 'react'
-import BeautyStars from 'components/StarRating'
+import Link from 'next/link'
+import BeautyTrash from 'components/TrashRating'
 import { BusinessReview } from 'components/Review'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -16,7 +17,7 @@ export default function Business() {
     formState: { errors },
   } = useForm<SubmitInputs>()
   const onSubmit: SubmitHandler<SubmitInputs> = (data) =>
-    alert(JSON.stringify([data]))
+    alert(JSON.stringify(data))
 
   const router = useRouter()
   const { slug } = router.query
@@ -42,20 +43,24 @@ export default function Business() {
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">{slug}</h1>
           <div className="mt-4 flex items-center">
-            <BeautyStars value={3} size={30} />
+            <BeautyTrash value={3} size={30} />
             <p className="text-white ml-6 font-semibold text-xl">69 reviews</p>
           </div>
         </div>
       </div>
       <section className="relative mt-20 px-2">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
-          <button
-            type="submit"
-            className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out"
-            onClick={() => setShowWrite(true)}
-          >
-            Write a review
-          </button>
+          <Link href={`/biz/${slug}/#review`}>
+            <button
+              type="submit"
+              className="mb-6 flex justify-center cursor-pointer bg-red-500 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white cursor-default focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo active:bg-gray-700 transition duration-150 ease-in-out"
+              onClick={() => {
+                setShowWrite(true)
+              }}
+            >
+              Write a review
+            </button>
+          </Link>
           <div className="md:w-1/2 pb-6 mb-6 border-b">
             <h5 className="text-2xl font-bold text-gray-700 mb-4">
               About this business
@@ -96,12 +101,12 @@ export default function Business() {
             </ul>
             {showWrite ? (
               <div className="my-6">
-                <h5 className="text-2xl font-bold text-gray-700">
+                <h5 id="review" className="text-2xl font-bold text-gray-700">
                   Write a Review
                 </h5>
                 <div className="mt-2">
                   <div className="mb-4">
-                    <BeautyStars
+                    <BeautyTrash
                       size={20}
                       value={rating}
                       onChange={(value) => setRating(value)}
@@ -115,7 +120,7 @@ export default function Business() {
                       className="form_input"
                       {...register('text', { required: true })}
                     />
-                    <button type="submit" className="form_button">
+                    <button type="submit" className="form_red_button mt-4">
                       Submit
                     </button>
                   </form>
