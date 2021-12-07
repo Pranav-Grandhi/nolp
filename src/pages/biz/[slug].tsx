@@ -40,9 +40,7 @@ export default function Business() {
           />
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
-          <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">
-            Yolo Business
-          </h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">{slug}</h1>
           <div className="mt-4 flex items-center">
             <BeautyStars value={3} size={30} />
             <p className="text-white ml-6 font-semibold text-xl">69 reviews</p>
@@ -93,7 +91,7 @@ export default function Business() {
                       size={20}
                       value={rating}
                       onChange={(value) => setRating(value)}
-                      activeColor="#F59E0B"
+                      activeColor="#EF4444"
                       inactiveColor="#D1D5DB"
                     />
                   </div>

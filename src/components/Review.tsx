@@ -38,7 +38,7 @@ export function BusinessReview({
           <BeautyStars
             value={rating}
             size={20}
-            activeColor="#F59E0B"
+            activeColor="#EF4444"
             inactiveColor="#D1D5DB"
           />
         </div>
