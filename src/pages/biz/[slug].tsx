@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useState } from 'react'
 import BeautyStars from 'components/StarRating'
+import Review from 'components/Review'
 
 export default function Business() {
   const router = useRouter()
@@ -39,11 +40,17 @@ export default function Business() {
       <section className="relative mt-20 px-2">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="md:w-1/2 pb-6 mb-6 border-b">
-            <h5 className="text-2xl font-bold text-gray-700">About this business</h5>
+            <h5 className="text-2xl font-bold text-gray-700 mb-4">About this business</h5>
             <p>This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.</p>
           </div>
           <div className="md:w-1/2 pb-6 mb-6 border-b">
-              <h5 className="text-2xl font-bold text-gray-700">Location</h5>
+            <h5 className="text-2xl font-bold text-gray-700">Location</h5>
+          </div>
+          <div className="md:w-1/2 mb-6 border-b">
+            <h5 className="text-2xl font-bold text-gray-700">Reviews</h5>
+            <ul className="mt-4">
+              <Review imgsrc="" username="Agastya Gaur" rating={1} text="this place is trash" />
+            </ul>
           </div>
         </div>
       </section>
