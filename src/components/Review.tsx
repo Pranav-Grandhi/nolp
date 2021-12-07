@@ -72,7 +72,7 @@ export function UserReview({
           <BeautyStars
             value={rating}
             size={20}
-            activeColor="#F59E0B"
+            activeColor={LogoColor}
             inactiveColor="#D1D5DB"
           />
         </div>
