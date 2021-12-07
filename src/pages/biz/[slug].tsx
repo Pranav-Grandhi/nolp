@@ -5,6 +5,7 @@ import Link from 'next/link'
 import BeautyTrash from 'components/TrashRating'
 import { BusinessReview } from 'components/Review'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { LogoColor } from 'components/vars'
 
 type SubmitInputs = {
   text: string
@@ -110,7 +111,7 @@ export default function Business() {
                       size={20}
                       value={rating}
                       onChange={(value) => setRating(value)}
-                      activeColor="#EF4444"
+                      activeColor={LogoColor}
                       inactiveColor="#D1D5DB"
                     />
                   </div>
