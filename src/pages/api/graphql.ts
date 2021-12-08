@@ -1,23 +1,27 @@
-import { resolvers } from '@generated/type-graphql'
 import { ApolloServer, gql } from 'apollo-server-micro'
-import { MicroRequest } from 'apollo-server-micro/dist/types'
-import { ServerResponse } from 'http'
+import BusinessResolver from 'graphql/resolvers/business'
+import ReviewResolver from 'graphql/resolvers/review'
+import UserResolver from 'graphql/resolvers/user'
+import { NextApiRequest, NextApiResponse } from 'next'
 import { buildSchema } from 'type-graphql'
 
 async function setup() {
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
-      resolvers: resolvers,
+      resolvers: [UserResolver, ReviewResolver, BusinessResolver],
       validate: false,
     }),
   })
 
-  const startServer = apolloServer.start()
+  apolloServer.start()
 
   return apolloServer
 }
 
-export default async function handler(req: MicroRequest, res: ServerResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const server = await setup()
   await server.createHandler({
     path: '/api/graphql',

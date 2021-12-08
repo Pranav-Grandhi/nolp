@@ -1,0 +1,6 @@
+{
+    "type": "postgres",
+    "url": "postgresql://postgres:dOmBDM0JX4zZ0tZLoHt7@containers-us-west-20.railway.app:6529/railway",
+    "entities": ["dist/entities/*.js"],
+    "migrations": ["dist/migrations/*.js"]
+}

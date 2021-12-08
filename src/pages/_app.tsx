@@ -1,18 +1,18 @@
+import 'reflect-metadata'
 import 'styles/app.css'
 import 'styles/tailwind.css'
 
 import Page from 'components/Page'
 import type { AppProps } from 'next/app'
-import Link from 'next/link'
-import { Provider, signIn, signOut, useSession } from 'next-auth/client'
+import { SessionProvider } from 'next-auth/react'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider session={pageProps.session}>
+    <SessionProvider session={pageProps.session}>
       <Page>
         <Component {...pageProps} />
       </Page>
-    </Provider>
+    </SessionProvider>
   )
 }
 

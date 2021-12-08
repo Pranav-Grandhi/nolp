@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { signIn } from 'next-auth/client'
+import { signIn } from 'next-auth/react'
 
 export default function Header() {
   return (
