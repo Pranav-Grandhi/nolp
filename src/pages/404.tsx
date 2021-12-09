@@ -17,6 +17,11 @@ export default function DNE() {
             />
           </>
         }
+        icon={
+          <>
+            <img src="images/doomer.png" alt="Doomer" className="mx-auto" height="100" width="100"/>
+          </>
+        }
         title="Sorry!"
         subtitle="The page you requested does not exist"
       />
