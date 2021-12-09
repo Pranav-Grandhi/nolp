@@ -19,6 +19,13 @@ export default function About() {
         subtitle="Learn more about our mission"
       />
       <section className="small_section prose">
+        <h1>What is Nolp?</h1>
+        <h2>Get the <strike>Best</strike> Worst Reccomedations</h2>
+        <ul>
+          <li>Easy to Use</li>
+          <li>Fast Results</li>
+          <li>Reliable Reviews</li>
+        </ul>
         <p>
           Traditionally, users look to review websites to get recommendations
           for which establishments to visit, be it through good reviews or high
