@@ -17,6 +17,11 @@ export default function Home() {
             transition={2}
           />
         }
+        icon={
+          <>
+            <img src="images/logo2.png" alt="LogoIcon" className="mx-auto" width="50" height="50"/>
+          </>
+        }
         title="Separating the rest from the best"
         subtitle="Discover where you shouldn't go next"
       />

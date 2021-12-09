@@ -15,6 +15,11 @@ export default function About() {
             />
           </>
         }
+        icon={
+          <>
+            <img src="images/logo2.png" alt="LogoIcon" className="mx-auto" width="50" height="50"/>
+          </>
+        }
         title="Get to know us"
         subtitle="Learn more about our mission"
       />
