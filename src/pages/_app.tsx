@@ -1,4 +1,3 @@
-import 'reflect-metadata'
 import 'styles/app.css'
 import 'styles/tailwind.css'
 

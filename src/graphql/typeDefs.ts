@@ -44,7 +44,7 @@ export default gql`
     rating: Int
     text: String
     user: User
-    business: Business
+    businessID: String
   }
 
   input EditReviewInput {
@@ -69,7 +69,7 @@ export default gql`
     editReview(id: ID!, data: EditReviewInput): Review
     deleteReview(id: ID!): Boolean
     createBusiness(data: CreateBusinessInput): Review
-    editBusiness(data: EditBusinessInput): Review
+    editBusiness(id: ID!, data: EditBusinessInput): Review
     deleteBusiness(id: ID!): Boolean
   }
 `

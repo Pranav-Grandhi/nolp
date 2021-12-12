@@ -43,7 +43,7 @@ export type CreateBusinessInput = {
 }
 
 export type CreateReviewInput = {
-  business?: InputMaybe<Business>
+  businessID?: InputMaybe<Scalars['String']>
   rating?: InputMaybe<Scalars['Int']>
   text?: InputMaybe<Scalars['String']>
   user?: InputMaybe<User>
@@ -88,6 +88,7 @@ export type MutationDeleteReviewArgs = {
 
 export type MutationEditBusinessArgs = {
   data?: InputMaybe<EditBusinessInput>
+  id: Scalars['ID']
 }
 
 export type MutationEditReviewArgs = {
