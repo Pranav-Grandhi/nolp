@@ -1,17 +1,13 @@
 import { ForbiddenError, UserInputError } from 'apollo-server-micro'
 import { Context } from 'graphql/context'
 import {
-  MutationCreateReviewArgs,
+  CreateReviewInput,
   MutationDeleteBusinessArgs,
   MutationEditReviewArgs,
 } from 'graphql/types.generated'
 
-export async function createReview(
-  _,
-  args: MutationCreateReviewArgs,
-  ctx: Context
-) {
-  const { rating, text, businessID } = args.data
+export async function createReview(_, args: CreateReviewInput, ctx: Context) {
+  const { rating, text, businessID } = args
   const { user, prisma } = ctx
 
   return await prisma.review

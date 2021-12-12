@@ -10,12 +10,17 @@ const apolloServer = new ApolloServer({
   context,
 })
 
+const startServer = apolloServer.start()
+
 export const config = {
   api: {
     bodyParser: false,
   },
 }
 
-const handler = apolloServer.createHandler({ path: '/api/graphql' })
+async function handler(req, res) {
+  await startServer
+  apolloServer.createHandler({ path: '/api/graphql' })(req, res)
+}
 
 export default withRateLimit(handler)

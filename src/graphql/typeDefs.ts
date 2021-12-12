@@ -43,7 +43,6 @@ export default gql`
   input CreateReviewInput {
     rating: Int
     text: String
-    user: User
     businessID: String
   }
 
@@ -65,7 +64,7 @@ export default gql`
   }
 
   type Mutation {
-    createReview(data: CreateReviewInput): Review
+    createReview(data: CreateReviewInput!): Review
     editReview(id: ID!, data: EditReviewInput): Review
     deleteReview(id: ID!): Boolean
     createBusiness(data: CreateBusinessInput): Review
