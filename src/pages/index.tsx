@@ -19,7 +19,13 @@ export default function Home() {
         }
         icon={
           <>
-            <img src="images/logo2.png" alt="LogoIcon" className="mx-auto" width="50" height="50"/>
+            <img
+              src="images/logo2.png"
+              alt="LogoIcon"
+              className="mx-auto"
+              width="50"
+              height="50"
+            />
           </>
         }
         title="Separating the rest from the best"

@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/react'
 
 export default function Profile() {
   const router = useRouter()
-  const [session, loading] = useSession()
+  const { status, data: session } = useSession()
 
-  if (!loading && !session) {
+  if (status !== 'loading' && !session) {
     router.push('/')
     return null
   }

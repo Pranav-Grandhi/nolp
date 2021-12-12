@@ -17,7 +17,13 @@ export default function About() {
         }
         icon={
           <>
-            <img src="images/logo2.png" alt="LogoIcon" className="mx-auto" width="50" height="50"/>
+            <img
+              src="images/logo2.png"
+              alt="LogoIcon"
+              className="mx-auto"
+              width="50"
+              height="50"
+            />
           </>
         }
         title="Get to know us"
@@ -25,7 +31,9 @@ export default function About() {
       />
       <section className="small_section prose">
         <h1>What is Nolp?</h1>
-        <h2>Get the <strike>Best</strike> Worst Reccomedations</h2>
+        <h2>
+          Get the <strike>Best</strike> Worst Reccomedations
+        </h2>
         <ul>
           <li>Easy to Use</li>
           <li>Fast Results</li>

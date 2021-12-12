@@ -1,18 +1,23 @@
-import 'reflect-metadata'
 import 'styles/app.css'
 import 'styles/tailwind.css'
 
 import Page from 'components/Page'
+import { client } from 'lib/urql'
 import type { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
+import { Toaster } from 'react-hot-toast'
+import { Provider } from 'urql'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={pageProps.session}>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
-    </SessionProvider>
+    <Provider value={client}>
+      <SessionProvider session={pageProps.session}>
+        <Page>
+          <Toaster />
+          <Component {...pageProps} />
+        </Page>
+      </SessionProvider>
+    </Provider>
   )
 }
 

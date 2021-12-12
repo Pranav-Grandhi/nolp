@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router'
-import { useSession } from 'next-auth/client'
-import { SubmitHandler, useForm } from 'react-hook-form'
 import HeroSection from 'components/hero-section'
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
 type CreateInputs = {
   name: string
@@ -21,9 +21,9 @@ export default function Create() {
     alert(JSON.stringify(data))
 
   const router = useRouter()
-  const [session, loading] = useSession()
+  const { status, data: session } = useSession()
 
-  if (!loading && !session) {
+  if (status !== 'loading' && !session) {
     router.push('/')
     return null
   }
