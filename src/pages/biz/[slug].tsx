@@ -42,7 +42,9 @@ export default function Business() {
           />
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
-          <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">{slug}</h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">
+            {slug}
+          </h1>
           <div className="mt-4 flex items-center">
             <BeautyTrash value={3} size={30} />
             <p className="text-white ml-6 font-semibold text-xl">69 reviews</p>

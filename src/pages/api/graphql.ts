@@ -1,35 +1,17 @@
-import { ApolloServer, gql } from 'apollo-server-micro'
-import BusinessResolver from 'graphql/resolvers/business'
-import ReviewResolver from 'graphql/resolvers/review'
-import UserResolver from 'graphql/resolvers/user'
-import { NextApiRequest, NextApiResponse } from 'next'
-import { buildSchema } from 'type-graphql'
+import { ApolloServer } from 'apollo-server-micro'
+import context from 'graphql/context'
+import withRateLimit from 'graphql/helpers/withRateLimit'
 
-async function setup() {
-  const apolloServer = new ApolloServer({
-    schema: await buildSchema({
-      resolvers: [UserResolver, ReviewResolver, BusinessResolver],
-      validate: false,
-    }),
-  })
-
-  apolloServer.start()
-
-  return apolloServer
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const server = await setup()
-  await server.createHandler({
-    path: '/api/graphql',
-  })(req, res)
-}
+const apolloServer = new ApolloServer({
+  context,
+})
 
 export const config = {
   api: {
     bodyParser: false,
   },
 }
+
+const handler = apolloServer.createHandler({ path: '/api/graphql' })
+
+export default withRateLimit(handler)
