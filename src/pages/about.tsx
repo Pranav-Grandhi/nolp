@@ -32,7 +32,8 @@ export default function About() {
       <section className="small_section prose">
         <h1>What is Nolp?</h1>
         <h2>
-          Get the <span className="line-through">Best</span> Worst Reccomedations
+          Get the <span className="line-through">Best</span> Worst
+          Reccomedations
         </h2>
         <ul>
           <li>Easy to Use</li>
