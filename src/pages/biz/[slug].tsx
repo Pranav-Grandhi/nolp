@@ -44,7 +44,7 @@ export default function Business() {
             src="/images/openSign.jpg"
             alt="Open Sign"
             className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-            style={{ zIndex: '-1000' }}
+            style={{ zIndex: '-10' }}
           />
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">

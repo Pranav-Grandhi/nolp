@@ -43,7 +43,7 @@ export default function Create() {
               src="/images/buildings.jpg"
               alt="Buildings"
               className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-              style={{ zIndex: '-1000' }}
+              style={{ zIndex: '-10' }}
             />
           </>
         }

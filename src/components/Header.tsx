@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { signIn, useSession } from 'next-auth/react'
+import { useState } from 'react'
 
 export default function Header() {
   const { data: session, status } = useSession()
+  const [popOverShown, setPopOverShown] = useState(false)
 
   return (
     <>
@@ -28,6 +30,8 @@ export default function Header() {
                 <input
                   placeholder="Search ..."
                   className="block px-5 py-3.5 text-sm font-medium text-black focus:outline-none focus-visible:shadow-none"
+                  onFocus={() => setPopOverShown(true)}
+                  onBlur={() => setPopOverShown(false)}
                 />
               </ul>
             </div>
@@ -104,6 +108,24 @@ export default function Header() {
             </button>
           </div>
         </div>
+        {popOverShown ? (
+          <div className="absolute w-full">
+            <div
+              className="mx-auto w-96 bg-white h-40 z-20 rounded-b-md px-4 py-3"
+              style={{ top: '60px' }}
+            >
+              <div className="w-full h-10 rounded-md text-sm flex relative p-2">
+                <img src="" alt="" className="w-10 h-10 rounded-md" />
+                <div className="flex flex-col ml-3 h-10">
+                  <p className="font-medium">Name</p>
+                  <p className="text-gray-500 w-60 truncate">about</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
       </header>
     </>
   )
