@@ -1,8 +1,14 @@
 import HeroSection from 'components/hero-section'
+import { NextSeo } from 'next-seo'
 
 export default function About() {
   return (
     <>
+      <NextSeo
+        title="Nolp - Get to know us"
+        description="Learn more about our mission"
+        canonical="https://nolp.vercel.app/about"
+      />
       <HeroSection
         children={
           <>

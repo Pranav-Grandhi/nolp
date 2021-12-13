@@ -2,9 +2,9 @@ import { BusinessReview } from 'components/Review'
 import BeautyTrash from 'components/TrashRating'
 import { LogoColor } from 'components/vars'
 import { CREATE_REVIEW } from 'graphql/mutations/review'
-import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
@@ -36,9 +36,7 @@ export default function Business() {
 
   return (
     <>
-      <Head>
-        <title>{slug} | Nolp</title>
-      </Head>
+      <NextSeo title={`Nolp - ${slug}`} />
       <div className="relative pt-16 md:pt-24 lg:pt-32 pb-10 md:pb-16 lg:pb-24">
         <>
           <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>

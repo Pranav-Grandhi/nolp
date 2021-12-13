@@ -1,6 +1,6 @@
 import { UserReview } from 'components/Review'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 export default function User() {
   const router = useRouter()
@@ -8,9 +8,7 @@ export default function User() {
 
   return (
     <>
-      <Head>
-        <title>{slug} | Nolp</title>
-      </Head>
+      <NextSeo title={`Nolp - User: ${slug}`} />
       <section className="relative flex mt-20 px-2">
         <div className="max-w-screen-sm mx-auto w-full px-4 sm:px-6 md:px-8">
           <div className="flex items-center">

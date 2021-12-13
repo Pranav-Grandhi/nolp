@@ -1,10 +1,12 @@
 import HeroSection from 'components/hero-section'
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
+import { NextSeo } from 'next-seo'
 
 export default function DNE() {
   return (
     <>
+      <NextSeo title="Nolp - Page not found" />
       <HeroSection
         children={
           <>
