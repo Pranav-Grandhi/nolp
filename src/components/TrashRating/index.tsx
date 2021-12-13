@@ -1,5 +1,6 @@
-import React, { FC } from 'react'
 import Trash from 'components/TrashRating/trash'
+import React, { FC } from 'react'
+
 import { COLORS } from './colors'
 
 export interface Props {

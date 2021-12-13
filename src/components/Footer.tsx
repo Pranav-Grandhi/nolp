@@ -25,9 +25,7 @@ export default function Footer() {
             <h3 className="font-medium text-gray-900">Company</h3>
             <div>
               <Link href="/about">
-                <a className="text-gray-800 hover:text-gray-900">
-                  About
-                </a>
+                <a className="text-gray-800 hover:text-gray-900">About</a>
               </Link>
             </div>
           </div>

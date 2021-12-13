@@ -1,5 +1,5 @@
-import HeroSection from 'components/hero-section'
 import BackgroundSlider from 'components/BackgroundSlider'
+import HeroSection from 'components/hero-section'
 
 export default function Home() {
   return (
