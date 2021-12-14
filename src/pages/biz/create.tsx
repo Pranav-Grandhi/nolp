@@ -31,7 +31,7 @@ export default function Create() {
   const router = useRouter()
   const { status, data: session } = useSession()
 
-  if (status !== 'loading' && !session) {
+  if (status !== 'loading' && !session.user) {
     router.push('/')
     return null
   }
