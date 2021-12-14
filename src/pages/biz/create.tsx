@@ -1,8 +1,11 @@
 import HeroSection from 'components/hero-section'
+import { CREATE_BUSINESS } from 'graphql/mutations/business'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import { useMutation } from 'urql'
 
 type CreateInputs = {
   name: string
@@ -12,14 +15,18 @@ type CreateInputs = {
 }
 
 export default function Create() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<CreateInputs>()
-  const onSubmit: SubmitHandler<CreateInputs> = (data) =>
-    alert(JSON.stringify(data))
+  const { register, handleSubmit } = useForm<CreateInputs>()
+  const onSubmit: SubmitHandler<CreateInputs> = (data) => {
+    const { name, location, about } = data
+    const variables = { name, location, about }
+    createBusiness(variables).then((result) => {
+      if (result.error) {
+        toast.error(result.error.name)
+      }
+    })
+  }
+
+  const [createBusinessResult, createBusiness] = useMutation(CREATE_BUSINESS)
 
   const router = useRouter()
   const { status, data: session } = useSession()
@@ -92,8 +99,34 @@ export default function Create() {
               </div>
             </div>
             <span className="block w-full rounded-md shadow-sm">
-              <button type="submit" className="form_red_button w-full">
-                Create
+              <button type="submit" className="form_red_button mt-6">
+                {createBusinessResult.fetching ? (
+                  <>
+                    <svg
+                      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Processing...
+                  </>
+                ) : (
+                  <>Submit</>
+                )}
               </button>
             </span>
           </form>
