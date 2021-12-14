@@ -44,7 +44,7 @@ export default function Business() {
             src="/images/openSign.jpg"
             alt="Open Sign"
             className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-            style={{ zIndex: '-1000' }}
+            style={{ zIndex: '-10' }}
           />
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
@@ -85,7 +85,7 @@ export default function Business() {
           <div className="md:w-1/2 pb-6 mb-6 border-b">
             <h5 className="text-2xl font-bold text-gray-700">Location</h5>
           </div>
-          <div className="md:w-1/2 mb-6 border-b">
+          <div className="md:w-1/2">
             <h5 className="text-2xl font-bold text-gray-700">Reviews</h5>
             <ul className="mt-4">
               <BusinessReview
@@ -111,7 +111,7 @@ export default function Business() {
               />
             </ul>
             {showWrite ? (
-              <div className="my-6">
+              <div className="mt-6">
                 <h5 id="review" className="text-2xl font-bold text-gray-700">
                   Write a Review
                 </h5>

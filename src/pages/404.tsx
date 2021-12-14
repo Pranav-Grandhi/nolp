@@ -15,7 +15,7 @@ export default function DNE() {
               src="images/static.gif"
               alt="static"
               className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-              style={{ zIndex: '-1000' }}
+              style={{ zIndex: '-10' }}
             />
           </>
         }

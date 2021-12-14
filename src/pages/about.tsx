@@ -17,7 +17,7 @@ export default function About() {
               src="/images/openSign.jpg"
               alt="Open Sign"
               className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-              style={{ zIndex: '-1000' }}
+              style={{ zIndex: '-10' }}
             />
           </>
         }
