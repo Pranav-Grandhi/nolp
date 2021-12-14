@@ -50,7 +50,7 @@ const generateStyleSheet = ({ imagesCount, duration, transition }) => {
         background-position: center center;
         background-repeat: no-repeat;
         opacity: 0;
-        z-index: -1000;
+        z-index: -10;
         margin: 0;
         ${animation}
       }

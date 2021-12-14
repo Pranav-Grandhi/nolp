@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
+import { NextSeo } from 'next-seo'
 
 export default function Profile() {
   const router = useRouter()
@@ -12,14 +13,14 @@ export default function Profile() {
   }
 
   return (
-    <div>
-      <Head>
-        <title>Profile | Nolp</title>
-      </Head>
-      <main>
-        <h1>Profile</h1>
-        <pre>{JSON.stringify(session?.user, null, 2)}</pre>
-      </main>
-    </div>
+    <>
+      <NextSeo title={`Nolp - Profile`} />
+      <div>
+        <main>
+          <h1>Profile</h1>
+          <pre>{JSON.stringify(session?.user, null, 2)}</pre>
+        </main>
+      </div>
+    </>
   )
 }

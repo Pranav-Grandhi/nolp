@@ -1,8 +1,14 @@
 import HeroSection from 'components/hero-section'
+import { NextSeo } from 'next-seo'
 
 export default function About() {
   return (
     <>
+      <NextSeo
+        title="Nolp - Get to know us"
+        description="Learn more about our mission"
+        canonical="https://nolp.vercel.app/about"
+      />
       <HeroSection
         children={
           <>
@@ -11,7 +17,7 @@ export default function About() {
               src="/images/openSign.jpg"
               alt="Open Sign"
               className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-              style={{ zIndex: '-1000' }}
+              style={{ zIndex: '-10' }}
             />
           </>
         }
@@ -32,7 +38,8 @@ export default function About() {
       <section className="small_section prose">
         <h1>What is Nolp?</h1>
         <h2>
-          Get the <strike>Best</strike> Worst Reccomedations
+          Get the <span className="line-through">Best</span> Worst
+          Reccomedations
         </h2>
         <ul>
           <li>Easy to Use</li>

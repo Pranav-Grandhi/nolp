@@ -1,6 +1,7 @@
 import HeroSection from 'components/hero-section'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
+import { NextSeo } from 'next-seo'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 type CreateInputs = {
@@ -30,6 +31,10 @@ export default function Create() {
 
   return (
     <>
+      <NextSeo
+        title="Nolp - Create a business"
+        description="Get started with nolp and create a business today."
+      />
       <HeroSection
         children={
           <>
@@ -38,7 +43,7 @@ export default function Create() {
               src="/images/buildings.jpg"
               alt="Buildings"
               className="w-full h-full top-0 left-0 absolute bg-cover bg-center bg-no-repeat"
-              style={{ zIndex: '-1000' }}
+              style={{ zIndex: '-10' }}
             />
           </>
         }

@@ -1,4 +1,3 @@
-import 'styles/app.css'
 import 'styles/tailwind.css'
 
 import Page from 'components/Page'
