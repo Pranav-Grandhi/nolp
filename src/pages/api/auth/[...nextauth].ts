@@ -10,7 +10,7 @@ export default NextAuth({
         return {
           id: profile.id,
           name: profile.name,
-          email: profile.email_address,
+          email: profile.email,
           image: profile.avatar_url,
         }
       },

@@ -7,7 +7,7 @@ export default function Profile() {
   const router = useRouter()
   const { status, data: session } = useSession()
 
-  if (status !== 'loading' && !session) {
+  if (status !== 'authenticated') {
     router.push('/')
     return null
   }
