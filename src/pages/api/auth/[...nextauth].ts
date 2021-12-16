@@ -6,14 +6,6 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      profile: (profile) => {
-        return {
-          id: profile.id,
-          name: profile.name,
-          email: profile.email,
-          image: profile.avatar_url,
-        }
-      },
     }),
   ],
   secret: process.env.AUTH_SECRET,
