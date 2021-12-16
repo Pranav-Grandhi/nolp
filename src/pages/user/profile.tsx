@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 export default function Profile() {
   const { status, data: session } = useSession()
-  
+
   useEffect(() => {
     const router = useRouter()
     if (status !== 'authenticated') {
