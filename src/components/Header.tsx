@@ -36,7 +36,7 @@ export default function Header() {
               </ul>
             </div>
             <div className="hidden lg:flex items-center justify-end -mr-4">
-              {status !== 'loading' && !session.user ? (
+              {status !== 'authenticated' ? (
                 <>
                   <button
                     className="flex items-center px-4 md:px-5 py-3.5 text-sm font-medium text-black hover:text-red-500 focus:text-red-500 focus:outline-none focus-visible:shadow-none"
