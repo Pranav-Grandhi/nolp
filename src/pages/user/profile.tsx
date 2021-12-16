@@ -2,15 +2,18 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
+import { useEffect } from 'react'
 
 export default function Profile() {
-  const router = useRouter()
   const { status, data: session } = useSession()
-
-  if (status !== 'authenticated') {
-    router.push('/')
-    return null
-  }
+  
+  useEffect(() => {
+    const router = useRouter()
+    if (status !== 'authenticated') {
+      router.push('/')
+      return null
+    }
+  })
 
   return (
     <>

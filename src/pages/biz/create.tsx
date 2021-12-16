@@ -3,6 +3,7 @@ import { CREATE_BUSINESS } from 'graphql/mutations/business'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
+import { useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { useMutation } from 'urql'
@@ -28,13 +29,15 @@ export default function Create() {
 
   const [createBusinessResult, createBusiness] = useMutation(CREATE_BUSINESS)
 
-  const router = useRouter()
   const { status, data: session } = useSession()
 
-  if (status !== 'authenticated') {
-    router.push('/')
-    return null
-  }
+  useEffect(() => {
+    const router = useRouter()
+    if (status !== 'authenticated') {
+      router.push('/')
+      return null
+    }
+  })
 
   return (
     <>
