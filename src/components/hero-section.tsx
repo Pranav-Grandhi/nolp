@@ -3,6 +3,7 @@ interface HeroSectionProps {
   subtitle: string
   children?: any
   icon?: any
+  textColor?: string
 }
 
 export default function HeroSection({
@@ -10,6 +11,7 @@ export default function HeroSection({
   icon,
   title,
   subtitle,
+  textColor = "white"
 }: HeroSectionProps) {
   return (
     <>
@@ -17,10 +19,10 @@ export default function HeroSection({
         {children}
         <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16 text-center">
           <div className="mb-4">{icon}</div>
-          <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">
+          <h1 className={"text-2xl md:text-4xl font-bold text-" + textColor + " sm:text-3xl"}>
             {title}
           </h1>
-          <p className="mt-3 text-white md:text-lg">{subtitle}</p>
+          <p className={"mt-3 text-" + textColor + " md:text-lg"}>{subtitle}</p>
         </div>
       </div>
     </>
