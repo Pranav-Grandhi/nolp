@@ -1,5 +1,6 @@
 import HeroSection from 'components/hero-section'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -46,6 +47,9 @@ export default function About() {
           <li>Fast Results</li>
           <li>Reliable Reviews</li>
         </ul>
+        <Link href='/disclaimer'>
+          <a className="text-gray-800 hover:text-red-500">Read our Disclaimer!</a>
+        </Link>
         <p>
           Traditionally, users look to review websites to get recommendations
           for which establishments to visit, be it through good reviews or high

@@ -25,20 +25,25 @@ export default function Footer() {
             <h3 className="font-medium text-gray-900">Company</h3>
             <div>
               <Link href="/about">
-                <a className="text-gray-800 hover:text-gray-900">About</a>
+                <a className="text-gray-800 hover:text-red-500">About</a>
               </Link>
             </div>
           </div>
           <div className="py-4 space-y-4">
             <h3 className="font-medium text-gray-900">Terms</h3>
             <div>
+              <Link href='/disclaimer'>
+                <a className="text-gray-800 hover:text-red-500">Disclaimer</a>
+              </Link>
+            </div>
+            <div>
               <Link href='/privacy-policy'>
-                <a className="text-gray-800 hover:text-gray-900">Privacy Policy</a>
+                <a className="text-gray-800 hover:text-red-500">Privacy Policy</a>
               </Link>
             </div>
             <div>
               <Link href='/terms-of-service'>
-                <a className="text-gray-800 hover:text-gray-900">Terms of Service</a>
+                <a className="text-gray-800 hover:text-red-500">Terms of Service</a>
               </Link>
             </div>
           </div>
