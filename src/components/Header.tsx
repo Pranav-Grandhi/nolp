@@ -1,5 +1,6 @@
+import { Menu } from '@headlessui/react'
 import Link from 'next/link'
-import { signIn, useSession } from 'next-auth/react'
+import { signIn, signOut, useSession } from 'next-auth/react'
 import { useState } from 'react'
 
 export default function Header() {
@@ -70,15 +71,46 @@ export default function Header() {
                 </>
               ) : (
                 <>
-                  <div className="flex items-center">
-                    <p className="text-sm font-medium text-black mr-5">
-                      {session?.user.name}
-                    </p>
-                    <img
-                      src={session?.user.image}
-                      className="w-7 h-7 rounded-full"
-                    />
-                  </div>
+                  <Menu>
+                    <div className="flex flex-col">
+                      <Menu.Button>
+                        <div className="flex items-center">
+                          <p className="text-sm font-medium text-black mr-3">
+                            {session?.user.name}
+                          </p>
+                          <img
+                            src={session?.user.image}
+                            className="w-7 h-7 rounded-full"
+                          />
+                        </div>
+                      </Menu.Button>
+                      <div className="absolute z-20 mt-10 bg-white w-36 rounded shadow">
+                        <Menu.Items>
+                          <div className="flex flex-col outline-none">
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link href="/user/profile">
+                                  <a className="text-center mt-2 mx-2 py-1 rounded hover:bg-gray-100 text-sm font-medium">
+                                    Profile
+                                  </a>
+                                </Link>
+                              )}
+                            </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <button
+                                  className="text-center mb-2 mx-2 py-1 rounded hover:bg-gray-100 text-sm font-medium"
+                                  onClick={() => signOut()}
+                                >
+                                  Log out
+                                </button>
+                              )}
+                            </Menu.Item>
+                          </div>
+                        </Menu.Items>
+                      </div>
+                    </div>
+                  </Menu>
                 </>
               )}
             </div>

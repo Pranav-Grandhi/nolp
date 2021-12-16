@@ -30,10 +30,10 @@ export default function Create() {
   const [createBusinessResult, createBusiness] = useMutation(CREATE_BUSINESS)
 
   const { status, data: session } = useSession()
+  const router = useRouter()
 
   useEffect(() => {
-    const router = useRouter()
-    if (status !== 'authenticated') {
+    if (status !== 'loading' && status !== 'authenticated') {
       router.push('/')
       return null
     }
@@ -102,8 +102,8 @@ export default function Create() {
               </div>
             </div>
             <span className="block w-full rounded-md shadow-sm">
-              <button type="submit" className="form_red_button mt-6">
-                {createBusinessResult.fetching ? (
+              <button type="submit" className="form_red_button mt-6 w-full">
+                {createBusinessResult.fetching || createBusinessResult.error ? (
                   <>
                     <svg
                       className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
@@ -125,7 +125,7 @@ export default function Create() {
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       ></path>
                     </svg>
-                    Processing...
+                    Processing
                   </>
                 ) : (
                   <>Submit</>

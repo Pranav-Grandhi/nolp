@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:prettier/recommended", "plugin:@next/next/recommended"],
+  "extends": ["plugin:prettier/recommended", "plugin:@next/next/recommended", "plugin:react-hooks/recommended"],
   "plugins": ["@typescript-eslint", "simple-import-sort"],
   "env": {
     "node": true,
@@ -24,7 +24,9 @@
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "parser": "@typescript-eslint/parser",
   "settings": {
