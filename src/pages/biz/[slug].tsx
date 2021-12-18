@@ -1,29 +1,23 @@
+import axios from 'axios'
 import { BusinessReview } from 'components/Review'
 import BeautyTrash from 'components/TrashRating'
 import { LogoColor } from 'components/vars'
-import { CREATE_REVIEW } from 'graphql/mutations/review'
+import prisma from 'lib/prisma'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
-import { useMutation } from 'urql'
 
 type SubmitInputs = {
   text: string
 }
 
-export default function Business() {
+export default async function Business() {
   const { register, handleSubmit } = useForm<SubmitInputs>()
   const onSubmit: SubmitHandler<SubmitInputs> = (data) => {
     const text: String = data.text
     const variables = { text, rating }
-    createReview(variables).then((result) => {
-      if (result.error) {
-        toast.error(result.error.name)
-      }
-    })
   }
 
   const router = useRouter()
@@ -32,11 +26,13 @@ export default function Business() {
   const [showWrite, setShowWrite] = useState(false)
   const [rating, setRating] = useState(0) // initial rating value
 
-  const [createReviewResult, createReview] = useMutation(CREATE_REVIEW)
+  const business = await prisma.business.findUnique({
+    where: { id: slug.indexOf[0] },
+  })
 
   return (
     <>
-      <NextSeo title={`Nolp - ${slug}`} />
+      <NextSeo title={`Nolp - ${business.name}`} />
       <div className="relative pt-16 md:pt-24 lg:pt-32 pb-10 md:pb-16 lg:pb-24">
         <>
           <div className="absolute w-full h-full bg-black top-0 left-0 bg-opacity-75"></div>
@@ -49,7 +45,7 @@ export default function Business() {
         </>
         <div className="relative z-20 container mx-auto max-w-screen-xl px-4 sm:px-8 lg:px-12 xl:px-16">
           <h1 className="text-2xl md:text-4xl font-bold text-white sm:text-3xl ">
-            {slug}
+            {business.name}
           </h1>
           <div className="mt-4 flex items-center">
             <BeautyTrash value={3} size={30} />
@@ -131,7 +127,7 @@ export default function Business() {
                     {...register('text', { required: true })}
                   />
                   <button type="submit" className="form_red_button mt-6">
-                    {createReviewResult.fetching ? (
+                    {false ? (
                       <>
                         <svg
                           className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"

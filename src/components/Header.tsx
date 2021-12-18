@@ -146,7 +146,7 @@ export default function Header() {
               className="mx-auto w-96 bg-white h-40 z-20 rounded-b-md px-4 py-3"
               style={{ top: '60px' }}
             >
-              <div className="w-full h-10 rounded-md text-sm flex relative p-2">
+              <div className="w-full h-14 rounded-md text-sm flex relative p-2">
                 <img src="" alt="" className="w-10 h-10 rounded-md" />
                 <div className="flex flex-col ml-3 h-10">
                   <p className="font-medium">Name</p>

@@ -1,2 +1,0 @@
-export const RATE_LIMIT_REQUEST_AMOUNT = 1024
-export const RATE_LIMIT_REQUEST_DURATION = 10 * 1000 // 10 seconds

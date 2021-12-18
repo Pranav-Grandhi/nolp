@@ -1,22 +1,26 @@
 import 'styles/tailwind.css'
 
 import Page from 'components/Page'
-import { client } from 'lib/urql'
 import type { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
+import { useState } from 'react'
 import { Toaster } from 'react-hot-toast'
-import { Provider } from 'urql'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [queryClient] = useState(() => new QueryClient())
+
   return (
-    <Provider value={client}>
-      <SessionProvider session={pageProps.session}>
-        <Page>
-          <Toaster />
-          <Component {...pageProps} />
-        </Page>
-      </SessionProvider>
-    </Provider>
+    <SessionProvider session={pageProps.session}>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <Page>
+            <Toaster />
+            <Component {...pageProps} />
+          </Page>
+        </Hydrate>
+      </QueryClientProvider>
+    </SessionProvider>
   )
 }
 
