@@ -32,12 +32,19 @@ const Post = ({}) => {
 
   return (
     <Layout>
-      <Heading mb={4}>{data.post.title}</Heading>
-      <Box mb={4}>{data.post.text}</Box>
-      <EditDeletePostButtons
-        id={data.post.id}
-        creatorId={data.post.creator.id}
-      />
+      <Box
+        mt={8}
+        mx="auto"
+        maxW={"800px"}
+        w="100%"
+      >
+        <Heading mb={4}>{data.post.title}</Heading>
+        <Box mb={4}>{data.post.text}</Box>
+        <EditDeletePostButtons
+          id={data.post.id}
+          creatorId={data.post.creator.id}
+        />
+      </Box>
     </Layout>
   );
 };
