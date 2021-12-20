@@ -44,7 +44,7 @@ const Register: React.FC<registerProps> = ({}) => {
                     },
                   });
                   if (response.data?.register.errors) {
-                    console.log(response.data?.register.errors)
+                    console.log(response.data?.register.errors);
                     setErrors(toErrorMap(response.data.register.errors));
                   } else if (response.data?.register.user) {
                     // worked
@@ -54,29 +54,27 @@ const Register: React.FC<registerProps> = ({}) => {
               >
                 {({ isSubmitting }) => (
                   <Form>
-                    <div>
-                      <label htmlFor="username" className="form_label">Username</label>
-                      <div className="form_input_container">
-                        <input id="username" name="username" placeholder="username" className="form_input mb-3" />
-                      </div>
+                    <div className="mb-3">
+                      <InputField
+                        name="username"
+                        placeholder="username"
+                        label="Username"
+                      />
                     </div>
-                    <div>
-                      <label htmlFor="email" className="form_label">Email</label>
-                      <div className="form_input_container">
-                        <input id="email" name="email" placeholder="email" className="form_input mb-3" />
-                      </div>
+                    <div className="mb-3">
+                      <InputField
+                        name="email"
+                        placeholder="email"
+                        label="Email"
+                      />
                     </div>
-                    <div>
-                      <label htmlFor="password" className="form_label">Password</label>
-                      <div className="form_input_container">
-                        <input
-                          id="password"
-                          name="password"
-                          placeholder="password"
-                          className="form_input mb-3"
-                          type="password"
-                        />
-                      </div>
+                    <div className="mb-4">
+                      <InputField
+                        name="password"
+                        placeholder="password"
+                        label="Password"
+                        type="password"
+                      />
                     </div>
                     <button type="submit" className="form_red_button w-full">
                       Sign up

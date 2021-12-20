@@ -66,18 +66,12 @@ const ChangePassword: NextPage = () => {
                 {({ isSubmitting }) => (
                   <Form>
                     <div className="mb-4">
-                      <label htmlFor="newPassword" className="form_label">
-                        New Password
-                      </label>
-                      <div className="form_input_container">
-                        <input
-                          id="newPassword"
-                          name="newPassword"
-                          placeholder="email"
-                          type="password"
-                          className="form_input mb-3"
-                        />
-                      </div>
+                      <InputField
+                        name="newPassword"
+                        placeholder="new password"
+                        label="New Password"
+                        type="password"
+                      />
                     </div>
                     {tokenError ? (
                       <Flex>

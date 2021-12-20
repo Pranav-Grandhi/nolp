@@ -33,19 +33,13 @@ const ForgotPassword: React.FC<{}> = ({}) => {
                     </Box>
                   ) : (
                     <Form>
-                      <div>
-                        <label htmlFor="email" className="form_label">
-                          Email
-                        </label>
-                        <div className="form_input_container">
-                          <input
-                            id="email"
-                            name="email"
-                            placeholder="email"
-                            type="email"
-                            className="form_input mb-3"
-                          />
-                        </div>
+                      <div className="mb-4">
+                        <InputField
+                          name="email"
+                          placeholder="email"
+                          label="Email"
+                          type="email"
+                        />
                       </div>
                       <button type="submit" className="form_red_button w-full">
                         Sign up

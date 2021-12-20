@@ -36,31 +36,20 @@ const CreatePost: React.FC<{}> = ({}) => {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <div>
-                    <label className="form_label" htmlFor="title">
-                      Title
-                    </label>
-                    <div className="form_input_container">
-                      <input
-                        id="title"
-                        name="title"
-                        placeholder="title"
-                        className="form_input mb-3"
-                      />
-                    </div>
+                  <div className="mb-4">
+                    <InputField
+                      name="title"
+                      placeholder="title"
+                      label="Title"
+                    />
                   </div>
-                  <div>
-                    <label className="form_label" htmlFor="body">
-                      Body
-                    </label>
-                    <div className="form_input_container">
-                      <input
-                        id="body"
-                        name="body"
-                        placeholder="text..."
-                        className="form_input mb-3"
-                      />
-                    </div>
+                  <div className="mb-4">
+                    <InputField
+                      textarea
+                      name="text"
+                      placeholder="text..."
+                      label="Body"
+                    />
                   </div>
                   <button type="submit" className="form_red_button w-full">
                     Create post

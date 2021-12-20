@@ -44,6 +44,7 @@ const Login: React.FC<{}> = ({}) => {
                     },
                   });
                   if (response.data?.login.errors) {
+                    console.log(response.data?.login.errors);
                     setErrors(toErrorMap(response.data.login.errors));
                   } else if (response.data?.login.user) {
                     if (typeof router.query.next === "string") {
@@ -57,28 +58,20 @@ const Login: React.FC<{}> = ({}) => {
               >
                 {({ isSubmitting }) => (
                   <Form>
-                    <div>
-                      <label className="form_label" htmlFor="usernameOrEmail">Username or Email</label>
-                      <div className="form_input_container">
-                        <input
-                          id="usernameOrEmail"
-                          name="usernameOrEmail"
-                          placeholder="username or email"
-                          className="form_input mb-3"
-                        />
-                      </div>
+                    <div className="mb-3">
+                      <InputField
+                        name="usernameOrEmail"
+                        placeholder="username or email"
+                        label="Username or Email"
+                      />
                     </div>
-                    <div>
-                      <label htmlFor="password" className="form_label">Password</label>
-                      <div className="form_input_container">
-                        <input
-                          id="password"
-                          name="password"
-                          placeholder="password"
-                          type="password"
-                          className="form_input mb-3"
-                        />
-                      </div>
+                    <div className="mb-3">
+                      <InputField
+                        name="password"
+                        placeholder="password"
+                        label="Password"
+                        type="password"
+                      />
                     </div>
                     <div className="flex justify-between mb-4">
                       <a
