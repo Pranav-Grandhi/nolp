@@ -45,37 +45,40 @@ const EditPost = ({}) => {
         <div className="relative md:h-screen md:flex">
           <div className="relative flex flex-col items-center justify-center h-screen px-2 lg:h-auto w-full">
             <div className="w-full px-4 py-8 pt-5 mx-3 bg-white sm:w-96">
-              <Formik
-                initialValues={{ title: data.post.title, text: data.post.text }}
-                onSubmit={async (values) => {
-                  await updatePost({ variables: { id: intId, ...values } });
-                  router.back();
-                }}
-              >
-                {({ isSubmitting }) => (
-                  <Form>
-                    <div>
-                      <InputField
-                        name="title"
-                        placeholder="title"
-                        label="Title"
-                      />
-                    </div>
-                    <div>
-                      <InputField
-                        textarea
-                        name="text"
-                        placeholder="text..."
-                        label="Body"
-                      />
-                    </div>
-                    <button type="submit" className="form_red_button w-full">
-                      Update post
-                    </button>
-                  </Form>
-                )}
-                ]
-              </Formik>
+              <h2 className="text-xl font-semibold md:text-2xl">Edit Post</h2>
+              <div className="mt-4">
+                <Formik
+                  initialValues={{ title: data.post.title, text: data.post.text }}
+                  onSubmit={async (values) => {
+                    await updatePost({ variables: { id: intId, ...values } });
+                    router.back();
+                  }}
+                >
+                  {({ isSubmitting }) => (
+                    <Form>
+                      <div>
+                        <InputField
+                          name="title"
+                          placeholder="title"
+                          label="Title"
+                        />
+                      </div>
+                      <div>
+                        <InputField
+                          textarea
+                          name="text"
+                          placeholder="text..."
+                          label="Body"
+                        />
+                      </div>
+                      <button type="submit" className="form_red_button w-full">
+                        Update post
+                      </button>
+                    </Form>
+                  )}
+                  ]
+                </Formik>
+              </div>
             </div>
           </div>
         </div>
